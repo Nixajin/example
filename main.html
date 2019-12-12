@@ -17,7 +17,7 @@
     <div id="page1">時間割だよー</div>
     <div id="page2">設定だよー</div>
   <!-- ここから時間割ポップアップ -->
-  <table width="100" height="100" border="1">
+  <table width="100" height="100" border="1" id="TBL">
   <tbody>
   <tr >
    <th onclick="alert('th1 click')">
@@ -71,6 +71,20 @@
  // ---------------------------
  tabs[0].onclick();
 
+ <!-- ここからクリックセルの内容取得 -->
+ function getCELL() {
+ var myTbl = document.getElementById('TBL');
+    // trをループ。rowsコレクションで,行位置取得。
+　for (var i=0; i<myTbl.rows.length; i++) {
+     // tr内のtdをループ。cellsコレクションで行内セル位置取得。
+   for (var j=0; j<myTbl.rows[i].cells.length; j++) {
+var Cells=myTbl.rows[i].cells[j]; //i番行のj番列のセル "td"
+　       // onclickで 'Mclk'を実行。thisはクリックしたセル"td"のオブジェクトを返す。
+　　 Cells.onclick =function(){Mclk(this);}
+　  }
+　 }
+　}
+  
  </script>
  </body>
 </html>
