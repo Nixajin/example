@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="portal_site.css">
+      <script type="text/javascript" src="portal_site.js"></script>
+  <title>
+    portal_site
+  </title>
+</head>
+
+<body>
+  <div class="page_head">
+    学内ポータルサイト
+  </div>
+  <div class="ChangeElem_Panel">
+    <img src="home4_pic.jpg" alt="ホーム画面" width="100%">
+  </div>
+  <div class="ChangeElem_Panel">
+    <img src="home4_pic.jpg" alt="スケジュール" width="100%">
+  </div>
+  <div class="ChangeElem_Panel">
+    <img src="school_time.jpg" alt="時間割" width="100%">
+  </div>
+  <div class="ChangeElem_Panel">
+    <img src="home1_pic.jpg" alt="お知らせ" width="100%">
+  </div>
+  <div class="ChangeElem_Panel">
+    <img src="home2_pic.jpg" alt="設定" width="100%">
+  </div>
+  <div class="menu_under">
+    <div class="ChangeElem_Btn"><img src="setting_cp.jpg" alt="設定"></div>
+    <div class="ChangeElem_Btn"><img src="schedule_cp.jpg" alt="スケジュール"></div>
+    <div class="ChangeElem_Btn"><img src="schoo_icon_cp.jpg" alt="時間割"></div>
+    <div class="ChangeElem_Btn"><img src="bell_cp.jpg" alt="ベル"></div>
+    <div class="ChangeElem_Btn"><img src="setting_cp.jpg" alt="設定"></div>
+  </div>
+
+</body>
+
+</html>
