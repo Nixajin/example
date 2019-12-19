@@ -60,18 +60,30 @@ $("td").click(function () {
     let col = this.cellIndex;
     console.log("Row: " + row + ", Column: " + col);
 
-    //時間割の切り替え
-    $("#TBL").on("click", function () {
-        $("#shirabasu").css("visibility", "visible");
-        $("#shirabasu").click(function () {
-            let eventId = event.target.id;
+     $("#TBL").on("click", function () {
 
-            TBL.rows[row].cells[col].innerHTML = $(`#${eventId}`).html();
+        if(row != 0 && col != 0){
 
-            $(this).css("visibility", "hidden");
+            $("#shirabasu").css("visibility", "visible");
+
+            $("#shirabasu").click(function () {
+
+                let eventId = event.target.id;
+
+                TBL.rows[row].cells[col].innerHTML = $(`#${eventId}`).html();
+
+                console.log('Row: ' + row + ', Column: ' + col);
+                console.log(eventId);
+
+                $(this).css("visibility", "hidden");
+
+                $(this).off();
+
+            });
 
             $(this).off();
-        });
-        $(this).off();
+         }
+
     });
+
 });
