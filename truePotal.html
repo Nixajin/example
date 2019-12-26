@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
  <head>
   <meta charset="UTF-8" />
@@ -13,21 +14,12 @@
 
  <body>
 
-  <!--ここでページ設定 -->
-
-  <p1 id="pagecontrol">
-   <a href="#page1"><img src="setting_cp.jpg" alt="設定"></a>
-   <a href="#page2"><img src="schedule_cp.jpg" alt="スケジュール"></a>
-   <a href="#page3"><img src="schoo_icon_cp.jpg" alt="時間割"></a>
-   <a href="#page4"><img src="bell_cp.jpg" alt="ベル"></a>
-   <a href="#page5"><img src="setting_cp.jpg" alt="設定"></a>
-  </p1>
-
   <div id="pagebody">
 
 
     <!-- ホーム画面-->
     <div id="page1" class="page">
+      <img src="home2_pic.jpg" alt="設定" width="100%">
     </div>
 
 
@@ -39,36 +31,41 @@
 
     <!--時間割-->
     <div id="page3" class="page">
-      <table width="600" height="600" border="1" id="TBL">
+      <table border="1"  align="center" id="TBL">
 
        <tbody>
         <tr>
-         <td>時間割</td><td>MON</td><td>TUE</td><td>WED</td><td>THU</td><td>FRI</td>
+         <th>時間割</th><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th>
+       </tr>
+        <tr>
+         <th>1</th><td></td><td></td><td></td><td></td><td></td>
         </tr>
         <tr>
-         <td>1</td><td></td><td></td><td></td><td></td><td></td>
+         <th>2</th><td></td><td></td><td></td><td></td><td></td>
         </tr>
         <tr>
-         <td>2</td><td></td><td></td><td></td><td></td><td></td>
+         <th>3</th><td></td><td></td><td></td><td></td><td></td>
         </tr>
         <tr>
-         <td>3</td><td></td><td></td><td></td><td></td><td></td>
+         <th>4</th><td></td><td></td><td></td><td></td><td></td>
         </tr>
         <tr>
-         <td>4</td><td></td><td></td><td></td><td></td><td></td>
-        </tr>
-        <tr>
-         <td>5</td><td></td><td></td><td></td><td></td><td></td>
+         <th>5</th><td></td><td></td><td></td><td></td><td></td>
         </tr>
        </tbody>
       </table>
 
       <div id="shirabasu">
-        <div class="study" id="content1">教科教室先生</div>
-        <div class="study" id="content2">線形代数学1004妻鳥</div>
-        <div class="study" id="content3">材料力学1104蔵前</div>
-        <div class="study" id="content4">センサ工学1105脇田</div>
+        <div id="input_study">
+          <div class="study" id="content1">教科教室先生</div>
+          <div class="study" id="content2">線形代数学1004妻鳥</div>
+          <div class="study" id="content3">材料力学1104蔵前</div>
+          <div class="study" id="content4">センサ工学1105脇田</div>
+          <div class="study" id="content5">プログラミング1104蔵前</div>
+        </div>
+        <div id="clear_study"><span>このコマをリセット</span></div>
       </div>
+
     </div>
 
 
@@ -81,7 +78,7 @@
           OITポータル
         </div>
 
-        <!-- ▼会話エリア scrollを外すと高さ固定解除 -->
+        <!-- ▼会話エリア scrollを外すと高さ固定解除-->
         <div class="line__contents scroll">
 
           <!-- 教員の吹き出し -->
@@ -161,9 +158,40 @@
 
     <!--設定-->
     <div id="page5" class="page">
-      <img src="home2_pic.jpg" alt="設定" width="100%">
+      <div class="setting_title">設定</div>
+      <div class="setting">
+        <div class="mintitle">パスコード</div>
+        <div></div>
+      </div>
+      <div class="setting">
+        <div class="mintitle">背景</div>
+        <div class="colorParetto">
+          <div class="Paretto" id="paretto1"><div class="CA" id="C11"></div><div class="CB" id="C21"></div></div>
+          <div class="Paretto" id="paretto2"><div class="CA" id="C12"></div><div class="CB" id="C22"></div></div>
+          <div class="Paretto" id="paretto3"><div class="CA" id="C13"></div><div class="CB" id="C23"></div></div>
+          <div class="Paretto" id="paretto4"><div class="CA" id="C14"></div><div class="CB" id="C24"></div></div>
+        </div>
+      </div>
+      <div class="setting">
+        <div class="mintitle">ホーム</div>
+        <div class="homeParetto">
+          <div><img id="home2" src="schedule_3.png" alt="スケジュール"></div>
+          <div><img id="home3" src="timeSchool_3.png" alt="時間割"></div>
+          <div><img id="home4" src="bell_3.png" alt="ベル"></div>
+          <div><img id="home5" src="setting_3.png" alt="設定"></div>
+        </div>
+      </div>
     </div>
+
   </div>
+
+  <p1 id="pagecontrol">
+   <div class="icon"><a href="#page1"><img id="pic1" src="home_1.png" alt="設定"></a></div>
+   <div class="icon"><a href="#page2"><img id="pic2" src="schedule_1.png" alt="スケジュール"></a></div>
+   <div class="icon"><a href="#page3"><img id="pic3" src="timeSchool_1.png" alt="時間割"></a></div>
+   <div class="icon"><a href="#page4"><img id="pic4" src="bell_1.png" alt="ベル"></a></div>
+   <div class="icon"><a href="#page5"><img id="pic5" src="setting_1.png" alt="設定"></a></div>
+  </p1>
 
  <!--javascriptの読み込み-->
  <script type="text/javascript" charset="UTF-8" src="truePotal.js"></script>
