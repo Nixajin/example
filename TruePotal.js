@@ -1,6 +1,8 @@
 //-----------------------------------
 //ここからホームの設定
 //-----------------------------------
+document.getElementById("page1").innerHTML = document.getElementById("page4").innerHTML;
+
 function settingHome(pageNum, homeBorder){
   $("#home2").css("border", "none");
   $("#home3").css("border", "none");
@@ -32,6 +34,7 @@ $(".homeParetto").click(function () {
 
 var tabs = document.getElementById('pagecontrol').getElementsByTagName('a');
 var pages = document.getElementById('pagebody').getElementsByClassName('page');
+console.log(tabs);
 
 
 // ▼B：タブの切り替え処理
@@ -41,6 +44,7 @@ function changeTab() {
    // ▼B-1. href属性値から対象のid名を抜き出す
 
    var targetid = this.href.substring(this.href.indexOf('#')+1,this.href.length);
+console.log(targetid);
 
    // ▼B-2. 指定のタブページだけを表示する
 
