@@ -191,7 +191,7 @@ $('td').on('click', function (e) {
 
   //時間割の切り替え
 
-       
+
             // 赤色に染める
             $(this).css("background-color", "red");
 
@@ -240,7 +240,7 @@ $('td').on('click', function (e) {
 
       });
 
-
+      $(this).css("background-color", "yellow");
 
       $(this).off();
 
