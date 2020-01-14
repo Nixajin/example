@@ -216,7 +216,7 @@ $('td').on('click', function (e) {
         if (eventId == "clear_study") {
 
           TBL.rows[row].cells[col].innerHTML = "";
-	  console.log($(this));
+	  $('td').removeClass('is-active');
 
         } else {
 

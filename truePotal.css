@@ -59,6 +59,10 @@ th{
   font-size: 20px;
 }
 
+td{
+
+}
+
 #shirabasu{
   display: flex;
   width: 100%;
@@ -93,6 +97,10 @@ th{
 
 .is-active{
  background-color: #FF0000;
+}
+
+.non-active{
+ background-color: transparent;
 }
 
 /*-------------------------------*/
