@@ -191,10 +191,9 @@ $('td').on('click', function (e) {
 
   //時間割の切り替え
 
-
-            // 赤色に染める
-            $(this).css("background-color", "red");
-
+  // 赤色に染める
+  //$(this).css("background-color", "red");
+  $(this).toggleClass('is-active');
 
   $("#TBL").one("click", function () {
 
@@ -217,6 +216,7 @@ $('td').on('click', function (e) {
         if (eventId == "clear_study") {
 
           TBL.rows[row].cells[col].innerHTML = "";
+	  console.log($(this));
 
         } else {
 
@@ -233,13 +233,11 @@ $('td').on('click', function (e) {
         $(this).css("visibility", "hidden");
 
 
-
         $(this).off();
 
 
 
       });
-
       $(this).css("background-color", "yellow");
 
       $(this).off();
@@ -249,8 +247,6 @@ $('td').on('click', function (e) {
 
 
   });
-
-
 
 });
 
