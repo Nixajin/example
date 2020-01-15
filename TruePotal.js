@@ -177,7 +177,7 @@ tabs[2].onclick();
 
 $('td').on('click', function (e) {
 
-
+  var className = $(this).attr("class");
 
   //縦
 
@@ -195,12 +195,12 @@ $('td').on('click', function (e) {
   //$(this).css("background-color", "red");
   $(this).toggleClass('is-active');
 
+
   $("#TBL").one("click", function () {
 
 
     if (row != 0 && col != 0) {
-
-
+      
 
       $("#shirabasu").css("visibility", "visible");
 
@@ -219,10 +219,13 @@ $('td').on('click', function (e) {
 	  $('td').removeClass('is-active');
 
         } else {
-
-          TBL.rows[row].cells[col].innerHTML = $(`#${eventId}`).html();
-
-        }
+	   if(className == "is-active"){
+	     TBL.rows[row].cells[col].innerHTML = "";
+	   }
+	   else{
+             TBL.rows[row].cells[col].innerHTML = $(`#${eventId}`).html();
+           }
+	}
 
 
 
@@ -243,8 +246,6 @@ $('td').on('click', function (e) {
       $(this).off();
 
     }
-
-
 
   });
 
