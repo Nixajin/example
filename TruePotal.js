@@ -217,7 +217,10 @@ $('td').on('click', function (e) {
 	      $('td').removeClass('is-active');
 	      console.log(className);
 	      num = 0;
-	 }
+	  }else{
+	      num = 0;
+	  }
+
 
 	  if(eventId != "clear_study"){
 	   if(className == "is-active"){
