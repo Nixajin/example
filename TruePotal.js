@@ -173,10 +173,14 @@ tabs[2].onclick();
 //ここからテーブルの位置取得
 
 //------------------------------
+var num= 0;
 
 
 $('td').on('click', function (e) {
 
+  num += 1;
+  console.log(num);
+  
   var className = $(this).attr("class");
 
   //縦
@@ -206,27 +210,26 @@ $('td').on('click', function (e) {
 
 
       $("#shirabasu").click(function () {
-
-
-
         let eventId = event.target.id;
 
+	  if(eventId == "clear_study" && num % 2 !=0){
+              TBL.rows[row].cells[col].innerHTML = "";
+	      $('td').removeClass('is-active');
+	      console.log(className);
+	      num = 0;
+	 }
 
-
-        if (eventId == "clear_study") {
-          TBL.rows[row].cells[col].innerHTML = "";
-	  $('td').removeClass('is-active');
-
-        } else {
+	  if(eventId != "clear_study"){
 	   if(className == "is-active"){
 	     TBL.rows[row].cells[col].innerHTML = "";
+	     num = 0;
 	   }
 	   else{
              TBL.rows[row].cells[col].innerHTML = $(`#${eventId}`).html();
 	     $('td').removeClass('is-active');
+	     num = 0;
            }
-	}
-
+	  }
 
 
         console.log('Row: ' + row + ', Column: ' + col);
